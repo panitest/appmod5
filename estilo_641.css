@@ -1,0 +1,21 @@
+@media (min-width:641px) { 
+
+#cajamodulocinco{  width:100%; margin-left:-50%;}
+
+.cajadelosalerts{  top:20%;}
+
+.cabezal{ height:56px; }
+.errores{  height:56px; line-height:56px;  }
+.errorestext{ height:56px; line-height:56px; }
+
+.cajadetextohome, .cajafinal{ font-size:1.1em;}
+.btcomenzar{ width:70%;  }
+.btcontinuar{ width:70%;}
+.btvolver{ width:30%;}
+
+/*.cajadelosalerts{  width:80%;  left:50%;  margin-left:-40%; top:30%; font-size:1em; padding-bottom:7%;}*/
+
+.cajadelosintros{ width:50%;   left:50%;  margin-left:-25%; top:30%; font-size:1.3em; padding-bottom:8%; padding-top:8%;}
+
+
+}

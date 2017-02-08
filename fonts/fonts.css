@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Conv_DIN Condensed Bold';
+	src: url('fonts/DIN Condensed Bold.eot');
+	src: local('☺'), url('fonts/DIN Condensed Bold.woff') format('woff'), url('fonts/DIN Condensed Bold.ttf') format('truetype'), url('fonts/DIN Condensed Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_DINPro-Cond';
+	src: url('fonts/DINPro-Cond.eot');
+	src: local('☺'), url('fonts/DINPro-Cond.woff') format('woff'), url('fonts/DINPro-Cond.ttf') format('truetype'), url('fonts/DINPro-Cond.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_DINPro-CondMedium';
+	src: url('fonts/DINPro-CondMedium.eot');
+	src: local('☺'), url('fonts/DINPro-CondMedium.woff') format('woff'), url('fonts/DINPro-CondMedium.ttf') format('truetype'), url('fonts/DINPro-CondMedium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+

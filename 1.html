@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>Aula Bi - Módulo 5</title>
+
+<link rel="stylesheet"  href="modulo3.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="estilo_320.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="estilo_481.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="estilo_641.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="estilo_961.css" type="text/css" charset="utf-8" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<style>
+#mje{ display:none;}
+</style>
+<style>
+html,body{width: 100%; height:100%; margin:0; padding:0; background:url(images/pizzarron.jpg) top center repeat;  background-color:#e6e6e6;  font-family: Verdana, Geneva, sans-serif; text-align:center;  } 
+#admin{ width:50px; height:50px; position:fixed; top:0; left:0; z-index:10000; background:url(images/Vacio.gif);}
+#panel{ width:100%; height:100%; position:fixed;z-index:20000; background:#CCC; display:none}
+label{ font-family:Verdana, Geneva, sans-serif; font-size:14px; color:#000; width:80%; margin:auto; display:block; margin-top:30px}
+input[type="button"]{ width:300px;padding:0; height:50px; margin:auto; display:block}
+input{ width:300px;padding:0; height:50px; margin:auto; display:block}
+#log{ font-family:Verdana, Geneva, sans-serif; font-size:12px; text-align:center}
+.btsuc{border:1px solid #A9A9A9; padding:3px; background:#F3F3F3; font-weight:normal; width:300px; margin:auto; margin-top:20px; line-height:50px;-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.75);}
+
+</style>
+<script type="text/javascript" src="panino/panino.js"></script>
+<script type="text/javascript" src="panino/comunes.js"></script>
+<script type="text/javascript" src="panino/paninoAJAX.js"></script>
+<script type="text/javascript" src="panino/utils.js"></script>
+<script type="text/javascript" src="panino/transicion.js"></script>
+<script type="text/javascript" src="panino/paninoOverlay.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script>
+/*!
+ * jQuery UI Touch Punch 0.2.3
+ *
+ * Copyright 2011–2014, Dave Furfero
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Depends:
+ *  jquery.ui.widget.js
+ *  jquery.ui.mouse.js
+ */
+!function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
+</script>
+<script>
+$( init );
+function init(){
+	$('#gondola1').draggable( {
+      containment: 'body',
+	  disabled: false,
+      cursor: 'move',
+      revert: true
+    } );
+	
+	$('#caja1').draggable( {
+      containment: 'body',
+	  disabled: false,
+      cursor: 'move',
+      revert: true
+    } );
+	
+	$('#farmacia1').draggable( {
+      containment: 'body',
+	  disabled: false,
+      cursor: 'move',
+      revert: true
+    } );
+	
+	
+	$('#farmacia2').draggable( {
+      containment: 'body',
+	  disabled: false,
+      cursor: 'move',
+      revert: true
+    } );
+	
+	
+	$('#caja2').draggable( {
+      containment: 'body',
+	  disabled: false,
+      cursor: 'move',
+      revert: true
+    } );
+	
+	
+	
+	$('#gondola2').draggable( {
+      containment: 'body',
+	  disabled: false,
+      cursor: 'move',
+      revert: true
+    } );
+	
+	
+	
+	$('#gondola3').draggable( {
+      containment: 'body',
+	  disabled: false,
+      cursor: 'move',
+      revert: true
+    } );
+	
+	
+	$('#farmacia3').draggable( {
+      containment: 'body',
+	  disabled: false,
+      cursor: 'move',
+      revert: true
+    } );
+	
+	
+	
+	
+	$('#gondola4').draggable( {
+      containment: 'body',
+	  disabled: false,
+      cursor: 'move',
+      revert: true
+    } );
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	$('#farmacia').droppable(
+		{
+		 drop: handleDrop,
+		 out: handleOut
+		}
+	);
+	
+	$('#gondola').droppable(
+		{
+		 drop: handleDrop,
+		 out: handleOut
+		}
+	);
+	
+	
+	$('#caja').droppable(
+		{
+		 drop: handleDrop,
+		 out: handleOut
+		}
+	);
+	
+}
+function inArray(needle, haystack) {
+    var length = haystack.length;
+    for(var i = 0; i < length; i++) {
+        if(haystack[i] == needle) return true;
+    }
+    return false;
+}
+function remove(needle, haystack){
+    var length = haystack.length;
+    for(var i = 0; i < length; i++) {
+        if(haystack[i] == needle){
+			haystack.splice(i,1);
+		};
+    }
+}
+ns.aciertos=0;
+ns.errores=0;
+function handleDrop(event, ui){
+	var contenedorId=this.id;
+	var contenidoId=ui.draggable[0].id;
+	var im='images/'+_(contenidoId).getElementsByTagName('img')[0].src.split('/').pop();
+	var imok=im.split('-')[0]+'ok'+'-'+im.split('-')[1];
+	var imko=im.split('-')[0]+'no'+'-'+im.split('-')[1];
+	var opts=['gondola1','caja1','farmacia1','farmacia2','caja2','gondola2','gondola3','farmacia3','gondola4'];
+	if(contenidoId.indexOf(contenedorId)!==-1){
+		//ok
+		ns.aciertos++;
+		if(contenidoId.indexOf('caja')!=-1){
+			_('txt').innerHTML='<span style="font-weight:300">Compra de productos deseados de forma prevista:</span> el producto no es vital, sin embargo es importante para la persona, por eso ubícalas en las zonas calientes, donde el cliente pueda observar y asesorarse.';
+		}
+		
+		if(contenidoId.indexOf('gondola')!=-1){
+			_('txt').innerHTML='Compra de productos necesarios de forma imprevista:</span> elige las zonas frías, pero a la vista del cliente, que no tiene identificado el producto que satisface su necesidad, no conoce la marca o necesita asesoramiento.';
+		}
+		
+		if(contenidoId.indexOf('farmacia')!=-1){
+			_('txt').innerHTML='<span style="font-weight:300">Compra de productos necesarios, de forma prevista:</span> ubícalas en la zona más fría, no a la vista del cliente (venta con receta, crónicos, etc.).';
+		}
+		
+		_(contenidoId).getElementsByTagName('img')[0].src=imok;
+		_('corrono').src='images/correcto.png';
+		_('mje').className="cajadelosalerts bien";
+	}else{
+		//ko
+		ns.errores++;
+		if(contenidoId.indexOf('caja')!=-1){
+			_('txt').innerHTML='<span id="txt"><span style="font-weight:300">Compra de productos deseados de forma prevista:</span> el producto no es vital, sin embargo es importante para la persona, por eso ubícalas en las zonas calientes, donde el cliente pueda observar y asesorarse.</span>';
+		}
+		if(contenidoId.indexOf('gondola')!=-1){
+			_('txt').innerHTML='<span style="font-weight:300">Compra de productos necesarios de forma imprevista:</span> elige las zonas frías, pero a la vista del cliente, que no tiene identificado el producto que satisface su necesidad, no conoce la marca o necesita asesoramiento.';
+		}
+		if(contenidoId.indexOf('farmacia')!=-1){
+			_('txt').innerHTML='<span style="font-weight:300">Compra de productos necesarios, de forma prevista:</span> ubícalas en la zona más fría, no a la vista del cliente (venta con receta, crónicos, etc.).';
+		}
+		
+		
+		_(contenidoId).getElementsByTagName('img')[0].src=imko;
+		_('mje').className="cajadelosalerts mal";
+		_('corrono').src='images/incorrecto.png';
+	}
+	ui.draggable.draggable( 'option', 'revert', false );
+	ns.actual=contenidoId;
+	_('mje').style.display='block';
+	_('errores').innerHTML=ns.errores;
+	_('aciertos').innerHTML=ns.aciertos;
+	if(((ns.errores)+(ns.aciertos))==9){
+		setTimeout(fin,3000);
+	}
+}
+function fin(){
+	location='final.html';
+}
+function desaparecer(id){
+	_('mje').style.display='none';
+	_(id).onMotionFinished=function(){
+		_(id).style.visibility='hidden';
+	}
+	fx(_(id),[
+    {'inicio':1,'fin':0,'u':'','propCSS':'opacity'}
+    ],1000,true,senoidal);
+}
+function handleOut(){
+	
+}
+
+
+
+
+function administrar(){
+	_('log').innerHTML='';
+	_('panel').style.display='block';
+}
+
+function testConexion(){
+		var im=new Image(),
+		t=setTimeout(
+				function(){
+					_('log').innerHTML='No hay conexión a internet.';
+				},
+				5000
+		);
+		im.onload=function(){
+			clearTimeout(t);
+			saveDataInServer();
+			return;
+		};
+		im.onerror=function(){
+			clearTimeout(t);
+			_('log').innerHTML='No hay conexión a internet.';
+			return;
+		};
+		im.src='http://servidordeapps.com/images/ajax-loader.gif?'+(+new Date());
+		
+}
+	
+	
+function exportar(){
+	_('log').innerHTML='<img src="images/ajax-loader.gif">';
+	testConexion();
+}
+function saveDataInServer(){
+		var data={'proceso':'savedataaulabi','datos':localStorage.getItem('datos')};
+		request(
+				'http://servidordeapps.com/proceso2.php',
+				function(r){
+					localStorage.removeItem('datos');
+					iniciotablet();
+					_('log').innerHTML='Los datos han sido guardados.';
+				},
+				data
+		);
+}
+function nueva_farmacia(){
+	if(_('nuevaf').style.display!='block'){
+		_('nuevaf').style.display='block';
+	}else{
+		_('nuevaf').style.display='none';
+	}
+}
+function guardarsucursal(){
+	//nombre_farmacia
+	//direccion_farmacia
+	//cant_empleados_farmacia
+	var farmacia={};
+	farmacia['nombre']=_('nombre_farmacia').value;
+	farmacia['direccion']=_('direccion_farmacia').value;
+	farmacia['cant_usuarios']=_('cant_empleados_farmacia').value;
+	farmacia['tablet']=ns.tablet;
+	ns.datos.push(farmacia);
+	localStorage.setItem('datos',JSON.stringify(ns.datos));
+	
+	
+	_('panel').style.display='none';_('nuevaf').style.display='none';
+	_('nombre_farmacia').value=_('direccion_farmacia').value=_('cant_empleados_farmacia').value='';
+	alert('La sucursal ha sido guardada');
+}
+function iniciotablet(){
+	if(!localStorage.getItem('datos')){
+		ns.datos=[];
+	}else{
+		ns.datos=JSON.parse(localStorage.getItem('datos'));
+	}
+	if(!localStorage.getItem('tablet')){
+		ns.tablet=getRandomInt(1, 100)+'_'+(+new Date());
+		localStorage.setItem('tablet',ns.tablet);
+	}else{
+		ns.tablet=localStorage.getItem('tablet');
+	}
+}
+DR(iniciotablet);
+</script>
+</head>
+
+<body bgcolor="#FFF">
+
+<div id="admin" onClick="administrar()"></div>
+<div id="panel" style="width:100%; height:100%; position:absolute; top:0; left:0;">
+
+<div style="font-family:Verdana, Geneva, sans-serif; font-size:30px; font-weight:bold; width:80px; height:80px; position:absolute; top:0px; right:0px; text-align:center; line-height:50px; color:#000" onClick="_('panel').style.display='none';_('nuevaf').style.display='none';">x</div>
+
+
+<label><br>
+<input type="button" name="" value="Nueva Sucursal" onClick="nueva_farmacia()">
+</label>
+<div id="nuevaf" style="display:none">
+Nombre:<br>
+<input id="nombre_farmacia" type="text"><br>
+Dirección:<br>
+<input id="direccion_farmacia" type="text"><br>
+Cantidad de empleados:<br>
+<input id="cant_empleados_farmacia" type="text"><br>
+<div onClick="guardarsucursal()" class="btsuc">Guardar sucursal</div>
+</div>
+
+
+<label><br>
+<input type="button" name="" value="Exportar Datos" onClick="exportar()">
+</label>
+<div id="log"></div>
+
+</div>
+
+
+
+
+<div id="cajamodulocinco">
+<div class="mitad">
+
+
+<div id="farmacia">
+<img src="images/sector-farmacia.png" width="100%" height="auto">
+</div>
+<div id="gondola">
+<img src="images/sector-gondolas.png" width="100%" height="auto">
+</div>
+<div id="caja">
+<img src="images/sector-cajas.png" width="100%" height="auto">
+</div>
+</div>
+
+<div class="mitad2">
+<div class="cabezal">
+
+
+<div class="errorestext" id="errores"> 0</div>
+<div class="errores"><img src="images/errores.png" width="auto" height="100%" alt="errores"></div>
+
+<div class="errorestext aciertostext" id="aciertos"> 0</div>
+<div class="errores"><img src="images/aciertos.png" width="auto" height="100%" alt="aciertos"></div>
+
+<div class="limpiar"></div>
+</div>
+
+<div class="cajadeproductos">
+
+<div id="mje" class="cajadelosalerts bien">
+<div class="btcerrar" onClick="desaparecer(ns.actual);"></div>
+<img id="corrono" src="images/correcto.png" width="100%" height="auto" alt="correcto"><span id="txt"><span style="font-weight:300">Compra de productos deseados de forma prevista:</span> el producto no es vital, sin embargo es importante para la persona, por eso ubícalas en las zonas calientes, donde el cliente pueda observar y asesorarse.</span></div>
+
+
+
+<div class="productos" id="gondola1"><img src="images/1-desodorante.png" class="productos2"></div>
+<div class="productos" id="caja1"> <img src="images/2-afeitadora.png" class="productos2" > </div>
+<div class="productos" id="farmacia1"><img src="images/3-buscapinafem.png" class="productos2" > </div>
+<div class="productos" id="farmacia2"><img src="images/4-dulcolax.png" class="productos2" > </div>
+<div class="productos" id="caja2"><img src="images/5-pilas.png" class="productos2" > </div>
+<div class="productos" id="gondola2"><img src="images/6-algodon.png" class="productos2" > </div>
+<div class="productos" id="gondola3"><img src="images/7-shampoo.png" class="productos2" > </div>
+<div class="productos" id="farmacia3"><img src="images/8-buscapinacomo.png" class="productos2" > </div>
+<div class="productos" id="gondola4"><img src="images/9-acondicionador.png" class="productos2" >  </div>
+<div class="limpiar"></div>
+</div>
+
+</div>
+<div class="limpiar"></div>
+
+</div>
+</body>
+</html>

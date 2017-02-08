@@ -1,0 +1,81 @@
+*{margin:0; padding:0;}
+html,body{width: 100%; height:100%; margin:0; padding:0; text-align:center; font-family: 'Lato', sans-serif; font-weight:900; font-size:17px; } 
+
+
+#farmacia{ display:block; position:relative; width:100%; height:auto;}
+#gondola{display:block; position:relative; width:100%; height:auto;}
+#caja{display:block; position:relative; width:100%; height:auto;}
+
+#cajamodulocinco{ display:block; width:960px; height:auto; position:relative; left:50%; margin-left:-480px;}
+
+.btcerrar{ display:block; width:15px; height:15px; position:absolute; top:7px; right:7px; background:url(images/cerrar.png) center center no-repeat; cursor:pointer; z-index:2500; }
+.btcerrar:hover{filter:alpha(opacity=40); opacity:0.4; }
+
+.mitad{ display:block; width:45%; position:relative; float:left; position:relative; background:url(images/back_piso.jpg) repeat;}
+.mitad2{ display:block; width:55%; position:relative; float:left; position:relative;}
+
+.errores{ float:right; display:block; height:56px; line-height:56px; position:relative; right:1%;  }
+.errorestext{ float:right; display:block; height:56px; line-height:56px; padding:0 2%; position:relative; right:1%; font-size:1.9em; color:#FFF; font-weight:900; }
+.aciertostext{color:#D9E021; padding:0 6% 0 2%;}
+
+.productos{ display:block; width:30%; height:auto; float:left; cursor:pointer; position:relative;}
+.productos:hover{filter:alpha(opacity=50); opacity:0.5; }
+
+
+.productosubicados{display:block; width:35%; height:auto; position:absolute; top: 5%; left:50%; margin-left:-15%; z-index:3000;}
+
+.lugarvacio{display:block; width:30%; height:50px;}
+
+.productos2{ width:100%; height:auto;}
+
+.cajadeproductos{ display:block; width:100%; position:relative;  text-align:center; /*top:30%*/;}
+
+textarea{resize:none}
+
+.limpiar{ clear:both;}
+
+#contenedorgeneral{ display: block; width:100%; height:700px; position:relative; text-align:center; background:url(images/pagina2.jpg) top center no-repeat; background-size:100%;}
+
+.cajadelsvg{  height:100%; position:relative; padding:0; margin:0;}
+
+.cajahome{ display:block; width:100%; height:100%; position:relative; padding:0; margin:0;}
+
+.cabezal{display:block; position: relative; z-index:1000; width:100%; height:56px; left:50%; margin-left:-50%; background: url(images/back_cabezal.png) repeat; color:#FFF; }
+
+.cajadelosalerts{ display:block; position: absolute; z-index:1000; width:80%; height:auto;  left:50%;  margin-left:-42%; top:30%; padding:2% 2% 10% 2%; text-align:center; font-size:20px; color:#FFF; -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px; font-size:1em;}
+
+.bien{ background:url(images/back_bien.png) repeat;}
+
+.mal{background:url(images/back_mal.png) repeat;}
+
+.first{background: url(images/back-first.png) repeat;}
+
+.niveles{ float:left;}
+
+
+
+.cajadetextohome{ display:block; width:70%; position:absolute; top:15%; left:5%; color:#FFF; text-align:left; font-size:1.5em;}
+
+a.btcomenzar{ display:block; }
+a.btcomenzar:hover{filter:alpha(opacity=50); opacity:0.5; }
+
+.btcomenzar{ width:60%; height:auto; }
+
+a.btcontinuar{ display:block; width:100%; height:auto; text-align:center }
+a.btcontinuar:hover{filter:alpha(opacity=50); opacity:0.5; }
+
+.btcontinuar{ width:60%; height:auto; text-align:center;}
+
+.cajadelosintros{ display:block; position: absolute; z-index:1000; width:50%; height:auto;  left:50%;  margin-left:-25%; top:30%;  text-align:center; font-size:20px; color:#FFF; -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px; font-size:1.3em; padding-bottom:8%; padding-top:8%;}
+
+
+.cajafinal{ display:block; width:100%; position:absolute; top:15%; color:#FFF; text-align:center; font-size:1.5em;}
+
+a.btvolver{ display:block; width:100%; height:auto; text-align:center }
+a.btvolver:hover{filter:alpha(opacity=50); opacity:0.5; }
+
+.btvolver{ width:30%; height:auto; text-align:center;}
