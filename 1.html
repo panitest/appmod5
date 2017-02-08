@@ -244,6 +244,17 @@ function desaparecer(id){
 function handleOut(){
 	
 }
+function precargar(){
+	var ims=['1-desodorante.png','2-afeitadora.png','3-buscapinafem.png','4-dulcolax.png','5-pilas.png','7-shampoo.png','6-algodon.png','8-buscapinacomo.png','9-acondicionador.png'],i=0,l=9;	
+	for(;i<l;i++){
+		window['iimmgg'+i]=new Image();
+		window['iimmgg'+i].src='images/'+ims[i].split('-')[0]+'ok'+'-'+ims[i].split('-')[1];
+		
+		window['iimmggko'+i]=new Image();
+		window['iimmggko'+i].src='images/'+ims[i].split('-')[0]+'no'+'-'+ims[i].split('-')[1]
+	}
+}
+DR(precargar);
 
 
 
